@@ -9,7 +9,4 @@ RUN mkdir -p /opt/share
 RUN apt-get update -qq && \
     apt-get install -y git r-base r-cran-rserve
 
-CMD \
-  ln -s /opt/kieker/build /opt/share/build
-
 VOLUME ["/opt/share"]
