@@ -8,7 +8,6 @@ if [ "$#" -eq 0 ]; then
   git clone https://github.com/kieker-monitoring/kieker.git
 elif [ "$#" -eq 1 ]; then
   echo "Copying the provided directory into the temporary directory.."
-  mkdir -p $TMP_DIR/kieker
   cp -r "$1" $TMP_DIR/.
 else
   echo "Usage: $0 [local kieker git folder]"
