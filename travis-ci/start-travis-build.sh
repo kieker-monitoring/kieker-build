@@ -17,5 +17,5 @@ fi
 
 cd $TMP_DIR/kieker
 rm lib/static-analysis/findbugs-3.0.1 -rf
-docker run -t -i -v $TMP_DIR:/opt kieker/kieker-build
+docker run -t -i -v $TMP_DIR:/opt kieker/kieker-build:travis-ci
 echo "The working directory was $TMP_DIR"
