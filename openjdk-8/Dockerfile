@@ -1,8 +1,11 @@
-FROM kieker/kieker-build:base
+FROM openjdk:8-jdk-slim
 
 WORKDIR /opt
 
-RUN apt-get install -y openjdk-8-jdk
+RUN apt-get update -qq && \
+    apt-get install -y \
+      texlive \
+      texlive-generic-extra \
+      texlive-fonts-extra \
+      biber
 
-# Fix for "java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty"
-RUN update-ca-certificates -f
