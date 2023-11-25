@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk-alpine
+FROM openjdk:13-alpine3.9
 
 WORKDIR /opt
 
